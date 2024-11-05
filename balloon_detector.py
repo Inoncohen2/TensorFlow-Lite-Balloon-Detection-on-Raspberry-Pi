@@ -1,3 +1,20 @@
+"""
+Balloon Detection Project using TensorFlow Lite
+Author: Inon Cohen
+© All rights reserved
+
+This code detects objects using a TensorFlow Lite model in real-time video from the camera. 
+It is adapted to locate and label balloons specifically, and to work with a given model path.
+
+Usage:
+1. Place the .tflite model and labelmap.txt files in the "Balloon_TFLite_model" directory.
+2. Run the code to detect Balloon and display the confidence score above each detection.
+
+Requirements:
+- OpenCV
+- TensorFlow Lite (or tflite_runtime)
+"""
+
 import os
 import argparse
 import cv2
