@@ -1,10 +1,10 @@
 """
-Balloon Detection Project using TensorFlow Lite
+Object Detection Project using TensorFlow Lite
 Author: Inon Cohen
 © All rights reserved
 
 This code detects objects using a TensorFlow Lite model in real-time video from the camera. 
-It is adapted to locate and label balloons specifically, and to work with a given model path.
+It is adapted to locate and label 80 different types of objects, and to work with a given model path.
 
 Usage:
 1. Place the .tflite model and labelmap.txt files in the "Sample_TFLite_model" directory.
