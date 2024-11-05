@@ -1,7 +1,6 @@
+# TensorFlow Lite Balloon Detection on Raspberry Pi
 
-# TensorFlow Lite Object Detection on Raspberry Pi
-
-## Real-Time Object Detection Project Using TensorFlow Lite on Raspberry Pi
+## Real-Time Balloon Detection Project Using TensorFlow Lite on Raspberry Pi
 
 This project utilizes the TensorFlow Lite model to perform object detection in real-time using a camera connected to a Raspberry Pi. The project includes a general object detection model and a specific implementation for detecting balloons, displaying the confidence percentage above each detected object.
 
