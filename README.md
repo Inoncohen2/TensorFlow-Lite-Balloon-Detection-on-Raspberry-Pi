@@ -1,11 +1,13 @@
 
-# TensorFlow Lite Balloon Detection on Raspberry Pi
+# TensorFlow Lite Object Detection on Raspberry Pi
 
-## Real-Time Balloon Detection Project Using TensorFlow Lite on Raspberry Pi
+## Real-Time Object Detection Project Using TensorFlow Lite on Raspberry Pi
 
-This project utilizes the SSD Lite MobileNet model to detect balloons in real-time, displaying the confidence percentage above each detected balloon. Follow these instructions to set up and run the project.
+This project utilizes the TensorFlow Lite model to perform object detection in real-time using a camera connected to a Raspberry Pi. The project includes a general object detection model and a specific implementation for detecting balloons, displaying the confidence percentage above each detected object.
 
 ---
+
+## General Object Detection
 
 ### Step 1: Download the Project
 
@@ -35,13 +37,29 @@ Install all necessary dependencies for the project, including TensorFlow Lite an
 bash get_pi_requirements.sh
 ```
 
-### Step 4: Run the Model for Initial Testing
+### Step 4: Run the General Object Detection Model
 
-Test the balloon detection and confirm that the camera is working by running the following code:
+Test the object detection functionality and confirm that the camera is working by running the following code:
+
+```bash
+python3 object_detection_webcam.py
+```
+
+This will start the camera feed and detect various objects based on the trained model.
+
+---
+
+## Balloon Detection
+
+### Step 5: Run the Balloon Detection Model
+
+To specifically detect balloons, ensure you have the necessary model files in the `Sample_TFLite_model` directory. You can run the following code to start the balloon detection:
 
 ```bash
 python3 balloon_detector.py
 ```
+
+This script will utilize a trained model specifically for balloon detection and display the detection results.
 
 ---
 
