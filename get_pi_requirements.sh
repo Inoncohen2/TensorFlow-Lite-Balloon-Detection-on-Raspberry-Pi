@@ -19,8 +19,6 @@ pip3 install opencv-python==3.4.11.41 || {
 # Adapted to different Python versions
 # © All rights reserved to Inon Cohen
 
-#pip3 install tensorflow  # Full TensorFlow installation if needed in the future
-
 version=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 
 if [ $version == "3.9" ]; then
@@ -34,5 +32,8 @@ elif [ $version == "3.6" ]; then
 elif [ $version == "3.5" ]; then
     pip3 install https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp35-cp35m-linux_armv7l.whl
 else
-    echo "Python version not supported for tflite_runtime installation"
+    echo "Python version not supported for tflite_runtime installation. Attempting to install TensorFlow instead."
+    pip3 install tensorflow || {
+        echo "TensorFlow installation failed. Please check compatibility with your Python version."
+    }
 fi
